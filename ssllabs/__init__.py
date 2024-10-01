@@ -304,7 +304,7 @@ class SSLLabsAssessment(object):
                 if self.return_all in ('on', 'done'):
                     return _status
             elif _status.get('status') == 'ERROR':
-                LOGGER.error('An error occured: {}'.format(_status.get('statusMessage')))
+                LOGGER.error('An error occurred: {}'.format(_status.get('statusMessage')))
                 return
         else:
             LOGGER.info('Checking running assessment for {}'.format(self.host))
@@ -325,7 +325,7 @@ class SSLLabsAssessment(object):
                 else:
                     return _status if self.return_all in ('on', 'done') else self._get_all_results()
             elif _status.get('status') == 'ERROR':
-                LOGGER.error('An error occured: {}'.format(_status.get('statusMessage')))
+                LOGGER.error('An error occurred: {}'.format(_status.get('statusMessage')))
                 return
 
         LOGGER.debug('Testing {} host(s)'.format(len(_status.get('endpoints'))))
@@ -353,7 +353,7 @@ class SSLLabsAssessment(object):
                 elif _host_status == 'READY':
                     return _status if self.return_all in ('on', 'done') else self._get_all_results()
                 elif _host_status == 'ERROR':
-                    LOGGER.error('[ERROR] An error occured: {}'.format(_status.get('statusMessage')))
+                    LOGGER.error('[ERROR] An error occurred: {}'.format(_status.get('statusMessage')))
                     return
                 elif _host_status == 'DNS':
                     LOGGER.debug('Resolving hostname')
