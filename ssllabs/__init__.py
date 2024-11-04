@@ -174,7 +174,7 @@ class SSLLabsAssessment(object):
             api_url=self.API_URL,
             host=self.host,
             publish=self.publish,
-            return_all=self.return_all
+            return_all=self.return_all,
             ignore_mismatch=self.ignore_mismatch,
             )
         if self.from_cache == 'on':
